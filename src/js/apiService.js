@@ -8,10 +8,19 @@ const api = {
 
   async getImage() {
     const res = await axios.get(
-      `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${this.apiKey}`,
+      `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.query}&page=${this.page}&per_page=12&key=${this.apiKey}`,
     );
     this.page += 1;
     return res.data.hits;
+  },
+  resetPage() {
+    this.page = 1;
+  },
+  set query(newValue) {
+    this.searchQuery = newValue;
+  },
+  get query() {
+    return this.searchQuery;
   },
 };
 

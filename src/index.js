@@ -12,9 +12,11 @@ loadMoreBtn.addEventListener('click', () => {
 form.addEventListener('submit', e => {
   e.preventDefault();
   const value = form.elements.query.value;
-  api.searchQuery = value;
-
+  api.query = value;
+  gallery.innerHTML = '';
+  api.resetPage();
   api.getImage().then(res => createCardItem(res));
+  form.reset();
 });
 
 const createCardItem = array => {
