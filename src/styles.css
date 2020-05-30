@@ -34,6 +34,7 @@ body {
 
 .load-more {
   display: none;
+  top: 95vh;
   margin: 20px auto;
   border-radius: 5px;
   background: #fff;
@@ -51,6 +52,7 @@ body {
 }
 
 .photo-card {
+  margin-top: 50px;
   width: 30%;
   list-style: none;
   margin-bottom: 30px;
@@ -59,5 +61,5 @@ body {
 .stats {
   display: flex;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
 }
+

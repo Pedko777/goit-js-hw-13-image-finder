@@ -1,18 +1,19 @@
 import './styles.css';
 import api from './js/apiService';
 import card from './template/cardTemplate.hbs';
-import openModalImg from './js/modalImg.js'
+import openModalImg from './js/modalImg.js';
 
 const form = document.forms.namedItem('search-form');
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 
-
 loadMoreBtn.addEventListener('click', () => {
-  api.getImage().then(res => createCardItem(res));
-  window.scrollTo({
-    top: document.documentElement.offsetHeight,
-    behavior: 'smooth',
+  api.getImage().then(res => {
+    createCardItem(res);
+    window.scrollTo({
+      top: document.documentElement.offsetHeight,
+      behavior: 'smooth',
+    });
   });
 });
 
