@@ -16,16 +16,32 @@ body {
   /*
    * CSS image reference example.
    */
-  background-image: url('./images/bg-pattern.png');
+  background-color: lemonchiffon;
 }
 
 .search-form {
-  margin-bottom: 20px;
+  text-align: center;
 }
 
-.buttonMore {
-  display: block;
-  margin: 0 auto;
+.search-form input {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 30%;
+  color: rgb(65, 65, 65);
+  border: 1px solid rgb(151, 151, 151);
+  outline: transparent;
+}
+
+.load-more {
+  display: none;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid rgb(151, 151, 151);
+  padding: 10px 20px;
+  cursor: pointer;
+  color: rgb(65, 65, 65);
+  outline: transparent;
 }
 
 .gallery {
